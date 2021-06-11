@@ -1,0 +1,31 @@
+// Variables
+
+$color-white: #ffffff;
+$color-white-opacity-70-percent: rgba(255, 255, 255, 0.7);
+$color-white-opacity-80-percent: rgba(255, 255, 255, 0.8);
+$color-dark: #131314;
+
+$color-black: #000000;
+$color-black-opacity-50-percent: rgba(0, 0, 0, 0.5);
+$color-black-opacity-70-percent: rgba(0, 0, 0, 0.7);
+$color-grey: #f6f7f9;
+
+$color-navigation-background-mobile: #f6f6f6;
+$color-navigation-text-mobile: #48494d;
+
+$color-form-placeholder: rgba(28, 28, 28, 1);
+
+$color-button: #0ad9c6;
+
+$color-basic-for-headers: #1f1f1f;
+
+// Viewports
+
+$desktop-min-width: 1024px;
+$desktop-content-width: 1166px;
+$tablet-max-width: 1023px;
+$tablet-width: 768px;
+$mobile-max-width: 767px;
+$mobile-width: 320px;
+
+// Mixin
