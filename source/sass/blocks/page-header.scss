@@ -1,0 +1,67 @@
+.page-header {
+  background-color: $color-background-header;
+  background-image: url("../../img/bike-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../../img/bike-desktop@2x.jpg");
+  }
+}
+
+.page-header__block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+
+.page-header__logo-wrap {
+  margin-bottom: 31px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.page-header__main-nav {
+  order: -1;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.page-header__slogan {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.page-header__slogan h1 {
+  @include off-margin;
+  margin-bottom: 24px;
+  color: $color-white;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 64px;
+}
+
+.page-header__slogan p {
+  @include off-margin;
+  color: $color-white-opacity-80-percent;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.page-header__wrap-form {
+  padding-left: 113px;
+  grid-column: 2 / -1;
+  grid-row: 2 / 4;
+}
+
+.page-header__wrap-form p {
+  @include off-margin;
+  margin-bottom: 20px;
+  color: $color-white;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  text-align: center;
+}

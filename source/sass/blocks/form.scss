@@ -1,0 +1,52 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__field {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.form__field input {
+  padding: 14px 29px 10px;
+  flex-grow: 1;
+  color: $color-black;
+  background-color: $color-white;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  border: 1px solid $color-form-input-border;
+  border-radius: 6px;
+}
+
+.form__field input::placeholder {
+  color: $color-form-placeholder-50-percent;
+}
+
+.form__field input:hover::placeholder,
+.form__field input:focus::placeholder {
+  color: $color-form-input-hover-focus;
+}
+
+.form__button {
+  @include button();
+  height: 48px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  color: $color-black;
+  border-radius: 6px;
+}
+
+.form__button:hover,
+.form__button:focus {
+  color: $color-black;
+  background-color: $color-button-hover-focus;
+}
+
+.form__button:active {
+  color: $color-black;
+  background-color: $color-grey;
+}

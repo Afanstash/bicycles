@@ -1,0 +1,18 @@
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__wrapper {
+  padding: 21px 0 9px;
+}
+
+.main-nav__list {
+  @include off-list;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main-nav__item {
+  width: calc(100% / 4);
+}
