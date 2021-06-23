@@ -1,18 +1,203 @@
+.main-nav {
+  display: flex;
+  justify-items: end;
+  align-items: flex-end;
+
+  @media (max-width: $tablet-max-width) {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
 .main-nav__toggle {
+  display: none;
+
+  @media (max-width: $tablet-max-width) {
+    @include button;
+    align-self: flex-end;
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  @media (max-width: $tablet-max-width) {
+    background-color: $color-button;
+
+    &:hover,
+    &:focus {
+      background-color: $color-button-hover-focus;
+    }
+
+    &:active {
+      background-color: $color-grey;
+    }
+  }
+
+  &::before {
+    @media (max-width: $tablet-max-width) {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 30px;
+      height: 30px;
+      background-image: url("../../img/menu.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
   display: none;
 }
 
-.main-nav__wrapper {
-  padding: 21px 0 9px;
+.main-nav--closed .main-nav__list {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.main-nav--opened {
+  @media (max-width: $tablet-max-width) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    min-height: 100vh;
+    background-color: $color-white;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 50px;
+    background-color: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-image: url("../../img/cross.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      background-image: url("../../img/cross-hover-focus.svg");
+    }
+
+    &:active::before {
+      background-image: url("../../img/cross-active.svg");
+    }
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  @media (max-width: $tablet-max-width) {
+    display: block;
+  }
+}
+
+.main-nav--nojs .main-nav__list {
+  @media (max-width: $tablet-max-width) {
+    display: block;
+  }
 }
 
 .main-nav__list {
   @include off-list;
+  padding: 0 23px;
+  flex-grow: 1;
+  flex-shrink: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+  justify-items: start;
+  border-bottom: 1px solid $color-white-opacity-20-percent;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+  }
 }
 
 .main-nav__item {
-  width: calc(100% / 4);
+  margin-bottom: 9px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.main-nav__item:nth-child(4n) {
+  justify-self: end;
+}
+
+.main-nav__link {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  color: $color-white-opacity-70-percent;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 16px 35px 16px 16px;
+    display: flex;
+    color: $color-navigation-text-mobile;
+    background-color: $color-navigation-background-mobile;
+    font-size: 20px;
+    line-height: 28px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: 19px;
+      right: 16px;
+      background-image: url("../../img/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+      background-image: url("../../img/arrow-hover-focus.svg");
+    }
+
+    &:active::before {
+      background-image: url("../../img/arrow-active.svg");
+    }
+  }
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus {
+  color: $color-white;
+
+  @media (max-width: $tablet-max-width) {
+    color: $color-dark;
+    background-color: $color-button-hover-focus;
+  }
+}
+
+.main-nav__link:active {
+  color: $color-dark;
+
+  @media (max-width: $tablet-max-width) {
+    color: $color-white;
+  }
 }

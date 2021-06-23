@@ -3,12 +3,16 @@
   margin: 0 auto;
   overflow: hidden;
   max-width: $desktop-width;
+  min-height: 100vh;
+  display: grid;
+  grid-template: minmax(825px, auto) 1fr minmax(120px, auto) / 1fr;
+  grid-template-areas: "header" "main" "footer";
 
-  @media (max-width: $tablet-max-width) {
-    max-width: $tablet-width;
-  }
+  // @media (max-width: $tablet-max-width) {
+  //   max-width: $tablet-width;
+  // }
 
-  @media (max-width: $mobile-max-width) {
-    max-width: $mobile-width;
-  }
+  // @media (max-width: $mobile-max-width) {
+  //   max-width: $mobile-width;
+  // }
 }

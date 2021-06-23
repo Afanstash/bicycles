@@ -1,6 +1,15 @@
 .form {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $tablet-max-width) {
+    margin: 0 auto;
+    width: 321px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 288px;
+  }
 }
 
 .form__field {
@@ -9,7 +18,7 @@
 }
 
 .form__field input {
-  padding: 14px 29px 10px;
+  padding: 12px 29px 10px;
   flex-grow: 1;
   color: $color-black;
   background-color: $color-white;
@@ -19,6 +28,10 @@
   line-height: 24px;
   border: 1px solid $color-form-input-border;
   border-radius: 6px;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 11px 21px;
+  }
 }
 
 .form__field input::placeholder {
@@ -32,12 +45,13 @@
 
 .form__button {
   @include button();
-  height: 48px;
+  height: 51px;
   font-weight: 600;
   font-size: 15px;
   line-height: 21px;
   color: $color-black;
   border-radius: 6px;
+  background-color: $color-button;
 }
 
 .form__button:hover,
