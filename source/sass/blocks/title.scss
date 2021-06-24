@@ -1,0 +1,12 @@
+.title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  color: $color-basic-for-headers;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 24px;
+    line-height: 41px;
+  }
+}

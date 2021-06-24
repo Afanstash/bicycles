@@ -1,13 +1,5 @@
 .page-header {
   position: relative;
-
-  @media (max-width: $tablet-max-width) {
-    max-height: 683px;
-  }
-
-  @media (max-width: $mobile-max-width) {
-    min-height: 750px;
-  }
 }
 
 .page-header__block {
