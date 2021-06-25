@@ -1,5 +1,7 @@
 .facts {
   padding: 131px 0 91px;
+  display: grid;
+  grid-template: auto / 1fr minmax(auto, $desktop-content-width) 1fr;
 
   @media (max-width: $tablet-max-width) {
     padding: 131px 106px 91px;
@@ -8,6 +10,10 @@
   @media (max-width: $mobile-max-width) {
     padding: 131px 0 91px;
   }
+}
+
+.facts__block {
+  grid-column: 2 / 3;
 }
 
 .facts h2 {
@@ -33,7 +39,12 @@
 
 .fact__item {
   margin-bottom: 40px;
-  flex: 0 0 263px;
+  padding: 0 5px;
+  flex: 0 0 265px;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 3px;
+  }
 }
 
 .fact__item h3 {
