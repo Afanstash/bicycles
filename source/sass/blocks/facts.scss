@@ -16,7 +16,7 @@
   grid-column: 2 / 3;
 }
 
-.facts h2 {
+.facts__block h2 {
   @include off-margin;
   margin-bottom: 50px;
   text-align: center;
