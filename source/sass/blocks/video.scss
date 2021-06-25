@@ -1,6 +1,14 @@
 .video {
   display: grid;
-  grid-template: 120px 1fr 100px / 1fr minmax(auto, $desktop-content-width) 1fr;
+  grid-template: 120px 1fr 103px / 1fr minmax(auto, $desktop-content-width) 1fr;
+
+  @media (max-width: $tablet-max-width) {
+    grid-template-rows: 70px 1fr 90px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    grid-template-rows: 85px 1fr 54px;
+  }
 }
 
 .video__background {
@@ -15,7 +23,17 @@
 }
 
 .video__content {
+  margin: 0 auto;
   text-align: center;
+  max-width: 410px;
+
+  @media (max-width: $tablet-max-width) {
+    max-width: 440px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    max-width: 290px;
+  }
 }
 
 .video__content h2 {
@@ -31,19 +49,37 @@
 .video__content p {
   @include off-margin;
   margin-bottom: 56px;
-  color: $color-white;
+  color: $color-white-opacity-70-percent;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
 
   @media (max-width: $tablet-max-width) {
     margin-bottom: 40px;
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
   }
 }
 
 .video__img {
   position: relative;
+  max-width: 929px;
+
+  @media (max-width: $tablet-max-width) {
+    max-width: 503px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    max-width: 288px;
+  }
+}
+
+.page-footer__map img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .video__button {
