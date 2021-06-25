@@ -34,7 +34,7 @@ inputUserPhone.addEventListener('invalid', () => {
     return;
   }
   if (inputUserPhone.validity.patternMismatch) {
-    inputUserPhone.setCustomValidity('Введите число');
+    inputUserPhone.setCustomValidity('Вводите только числа');
     return;
   }
   inputUserPhone.setCustomValidity('');
