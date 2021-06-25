@@ -44,7 +44,7 @@
       left: 10px;
       width: 30px;
       height: 30px;
-      background-image: url("../../img/menu.svg");
+      background-image: url("../img/menu.svg");
       background-position: 0 0;
       background-repeat: no-repeat;
     }
@@ -85,18 +85,18 @@
       left: 0;
       width: 50px;
       height: 50px;
-      background-image: url("../../img/cross.svg");
+      background-image: url("../img/cross.svg");
       background-position: 0 0;
       background-repeat: no-repeat;
     }
 
     &:hover::before,
     &:focus::before {
-      background-image: url("../../img/cross-hover-focus.svg");
+      background-image: url("../img/cross-hover-focus.svg");
     }
 
     &:active::before {
-      background-image: url("../../img/cross-active.svg");
+      background-image: url("../img/cross-active.svg");
     }
   }
 }
