@@ -1,0 +1,257 @@
+.types {
+  padding: 149px 0 129px;
+  background-color: $color-grey;
+  display: grid;
+  grid-template: auto / 1fr minmax(auto, $desktop-content-width) 1fr;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 50px 0 38px;
+  }
+}
+
+.types__block {
+  margin: 0;
+  padding: 0 20px;
+  grid-row: 1 / -1;
+  grid-column: 2 / 3;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 25px;
+  }
+}
+
+.types__block h2 {
+  @include off-margin;
+  margin-bottom: 51px;
+  text-align: center;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.types__list {
+  @include off-list;
+  margin: 0 -25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  // @media (max-width: $mobile-max-width) {
+  //   margin: 0;
+  // }
+}
+
+.types__item {
+  padding: 0 25px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  position: relative;
+  // flex: 0 1 33.33%;
+  // max-height: 679px;
+  // flex: 0 1 342px;
+  // flex-shrink: 1;
+  // display: flex;
+  // flex-direction: column;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 30px;
+    // flex: 0 1 270px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    // padding: 0;
+    margin-bottom: 20px;
+  }
+
+  &:last-child {
+    @media (max-width: $tablet-max-width) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.types__content--first-column {
+  padding-top: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 166px;
+    left: -35px;
+    background-image: url("../img/ellipse.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    @media (max-width: $tablet-max-width) {
+      width: 127px;
+      height: 127px;
+      background-size: 127px 127px;
+      top: 201px;
+      left: -12px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      left: 0;
+    }
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 0;
+  }
+}
+
+.types__content--first-column .types__img {
+  height: 503px;
+  z-index: 2;
+
+  @media (max-width: $tablet-max-width) {
+    height: 300px;
+  }
+}
+
+.types__content--center-column {
+  padding-top: 39px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 0;
+  }
+}
+
+.types__content--center-column .types__img {
+  height: 566px;
+
+  @media (max-width: $tablet-max-width) {
+    height: 300px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    background-image: url("../img/rectangle.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    top: 21px;
+    left: 6px;
+
+    @media (max-width: $tablet-max-width) {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &::after {
+    top: 581px;
+    right: 2px;
+
+    @media (max-width: $tablet-max-width) {
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
+.types__content--last-column .types__img {
+  height: 513px;
+
+  @media (max-width: $tablet-max-width) {
+    height: 300px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    top: -32px;
+    right: -11px;
+    background-image: url("../img/ellipse.svg");
+    background-size: 95px 95px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    @media (max-width: $tablet-max-width) {
+      width: 68px;
+      height: 68px;
+      background-size: 68px 68px;
+      top: -20px;
+      right: 0;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      top: -16px;
+      right: 11px;
+    }
+  }
+}
+
+.types__content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.types__img {
+  display: flex;
+  // z-index: 2;
+  // justify-content: center;
+  // position: relative;
+  // flex: 0 1 342px;
+  // display: flex;
+  // border-radius: 10px;
+
+  // @media (max-width: $tablet-max-width) {
+  //   // height: 300px;
+  //   flex: 0 0 300px;
+  // }
+}
+
+.types__img img {
+  display: block;
+  border-radius: 10px;
+  // width: 342px;
+  height: 100%;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // object-fit: cover;
+  // width: 30px;
+  // height: 30px;
+  // height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+
+  @media (max-width: $tablet-max-width) {
+    // height: 300px;
+    width: 270px;
+  }
+}
+
+.types__item p {
+  // flex-shrink: 1;
+  max-width: 342px;
+  margin: 20px 0;
+  padding: 0 15px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: -0.5px;
+
+  @media (max-width: $tablet-max-width) {
+    max-width: 270px;
+  }
+}

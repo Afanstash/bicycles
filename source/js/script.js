@@ -1,8 +1,8 @@
 'use strict';
-const navMain = document.querySelector('.main-nav');
-const navToggle = document.querySelector('.main-nav__toggle');
-const form = document.querySelector('.form');
-const inputUserPhone = form.querySelector('#user-phone');
+var navMain = document.querySelector('.main-nav');
+var navToggle = document.querySelector('.main-nav__toggle');
+var form = document.querySelector('.form');
+var inputUserPhone = form.querySelector('#user-phone');
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -27,7 +27,7 @@ window.addEventListener('keydown', function (evt) {
   }
 });
 
-inputUserPhone.addEventListener('invalid', () => {
+inputUserPhone.addEventListener('invalid', function () {
   console.log(inputUserPhone.validity);
   if (inputUserPhone.validity.valueMissing) {
     inputUserPhone.setCustomValidity('Обязательное поле');
@@ -41,29 +41,34 @@ inputUserPhone.addEventListener('invalid', () => {
   // inputUserPhone.reportValidity();
 });
 
-const resetForm = () => {
-  const inputUserName = form.querySelector('#user-name');
+var resetForm = function () {
+  var inputUserName = form.querySelector('#user-name');
   inputUserName.value = '';
   inputUserPhone.value = '';
   console.log(inputUserName.value);
   console.log(inputUserPhone.value);
 };
 
-form.addEventListener('submit', (evt) => {
+form.addEventListener('submit', function (evt) {
   evt.preventDefault();
 
-  const formData = new FormData(evt.target);
+  var formData = new FormData(evt.target);
 
   fetchData('https://echo.htmlacademy.ru/',
-    {
-      method: 'POST',
-      body: formData,
-    }, () =>
-      resetForm());
+      {
+        method: 'POST',
+        body: formData,
+      }, function () {
+        resetForm();
+      });
 });
 
-const fetchData = (url, options, onSuccess) => {
+var fetchData = function (url, options, onSuccess) {
   fetch(url, options)
-    .then((response) => response.json())
-    .then((response) => onSuccess(response));
+    .then(function (response) {
+      response.json();
+    })
+    .then(function (response) {
+      onSuccess(response);
+    });
 };

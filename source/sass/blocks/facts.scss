@@ -1,14 +1,14 @@
 .facts {
-  padding: 131px 0 91px;
+  padding: 151px 0 111px;
   display: grid;
   grid-template: auto / 1fr minmax(auto, $desktop-content-width) 1fr;
 
   @media (max-width: $tablet-max-width) {
-    padding: 131px 106px 91px;
+    padding: 70px 106px 33px;
   }
 
   @media (max-width: $mobile-max-width) {
-    padding: 131px 0 91px;
+    padding: 70px 0 43px;
   }
 }
 

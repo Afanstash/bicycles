@@ -5,7 +5,7 @@
   max-width: $desktop-width;
   min-height: 100vh;
   display: grid;
-  grid-template: minmax(825px, auto) 1fr minmax(120px, auto) / 1fr;
+  grid-template: auto 1fr minmax(120px, auto) / 1fr;
   grid-template-areas: "header" "main" "footer";
 
   // @media (max-width: $tablet-max-width) {
