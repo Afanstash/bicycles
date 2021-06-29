@@ -3,6 +3,7 @@ var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 var form = document.querySelector('.form');
 var inputUserPhone = form.querySelector('#user-phone');
+var anchors = document.querySelectorAll('a[href*="#"]');
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -27,6 +28,24 @@ window.addEventListener('keydown', function (evt) {
   }
 });
 
+// for (var anchor of anchors) {
+//   anchor.addEventListener("click", function(evt) {
+//     evt.preventDefault();
+//   })
+// }
+
+anchors.forEach(function (anchor) {
+  anchor.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    var blockId = anchor.getAttribute('href');
+    document.querySelector('' + blockId).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
+});
+
 inputUserPhone.addEventListener('invalid', function () {
   console.log(inputUserPhone.validity);
   if (inputUserPhone.validity.valueMissing) {
@@ -38,7 +57,6 @@ inputUserPhone.addEventListener('invalid', function () {
     return;
   }
   inputUserPhone.setCustomValidity('');
-  // inputUserPhone.reportValidity();
 });
 
 var resetForm = function () {
