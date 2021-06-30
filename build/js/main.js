@@ -28,12 +28,6 @@ window.addEventListener('keydown', function (evt) {
   }
 });
 
-// for (var anchor of anchors) {
-//   anchor.addEventListener("click", function(evt) {
-//     evt.preventDefault();
-//   })
-// }
-
 anchors.forEach(function (anchor) {
   anchor.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -43,11 +37,12 @@ anchors.forEach(function (anchor) {
       behavior: 'smooth',
       block: 'start',
     });
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
   });
 });
 
 inputUserPhone.addEventListener('invalid', function () {
-  console.log(inputUserPhone.validity);
   if (inputUserPhone.validity.valueMissing) {
     inputUserPhone.setCustomValidity('Обязательное поле');
     return;
@@ -63,8 +58,6 @@ var resetForm = function () {
   var inputUserName = form.querySelector('#user-name');
   inputUserName.value = '';
   inputUserPhone.value = '';
-  console.log(inputUserName.value);
-  console.log(inputUserPhone.value);
 };
 
 form.addEventListener('submit', function (evt) {

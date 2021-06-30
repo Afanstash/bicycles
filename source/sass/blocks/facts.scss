@@ -37,7 +37,7 @@
   }
 }
 
-.fact__item {
+.facts__item {
   margin-bottom: 40px;
   padding: 0 5px;
   flex: 0 0 265px;
@@ -47,7 +47,7 @@
   }
 }
 
-.fact__item h3 {
+.facts__item h3 {
   @include off-margin;
   margin-bottom: 15px;
   font-weight: 700;
@@ -62,7 +62,7 @@
   }
 }
 
-.fact__item p {
+.facts__item p {
   @include off-margin;
   font-weight: 400;
   font-size: 22px;

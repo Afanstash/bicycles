@@ -34,21 +34,3 @@ $tablet-max-width: 1023px;
 $tablet-width: 768px;
 $mobile-max-width: 767px;
 $mobile-width: 320px;
-
-// Mixin
-
-@mixin off-margin {
-  margin: 0;
-}
-
-@mixin off-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-@mixin button {
-  padding: 0;
-  border: none;
-  cursor: pointer;
-}
