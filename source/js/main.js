@@ -1,10 +1,4 @@
 'use strict';
-// //Точка входа. Модуль, который связывает другие модули
-// import './popup.js';
-// import './form.js';
-// import './map.js';
-// import './foto.js';
-
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 var form = document.querySelector('.form');
@@ -46,6 +40,10 @@ anchors.forEach(function (anchor) {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
   });
+});
+
+inputUserPhone.addEventListener('input', function () {
+  inputUserPhone.setCustomValidity('');
 });
 
 inputUserPhone.addEventListener('invalid', function () {
