@@ -1,5 +1,4 @@
 'use strict';
-
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 var form = document.querySelector('.form');
