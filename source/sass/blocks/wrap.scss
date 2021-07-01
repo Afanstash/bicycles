@@ -7,3 +7,15 @@
   grid-template: auto 1fr minmax(120px, auto) / 1fr;
   grid-template-areas: "header" "main" "footer";
 }
+
+.wrap__header {
+  grid-area: header;
+}
+
+.wrap__main {
+  grid-area: main;
+}
+
+.wrap__footer {
+  grid-area: footer;
+}
