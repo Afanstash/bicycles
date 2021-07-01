@@ -10,8 +10,6 @@ var inputUserPhone = form.querySelector('#user-phone');
 })();
 
 (function () {
-  navMain.classList.remove('main-nav--nojs');
-
   navToggle.addEventListener('click', function (evt) {
     evt.preventDefault();
     if (navMain.classList.contains('main-nav--closed')) {
