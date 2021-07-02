@@ -20,7 +20,7 @@
 
   @media (max-width: $tablet-max-width) {
     min-height: 340px;
-    grid-template: minmax(50px, auto) 85px 1fr / 1fr minmax(auto, 437px) minmax(auto, 437px) 1fr;
+    grid-template: minmax(50px, auto) minmax(85px, auto) 1fr / 1fr minmax(auto, 437px) minmax(auto, 437px) 1fr;
     background-image: url("../img/bike-tablet.jpg");
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -30,7 +30,7 @@
 
   @media (max-width: $mobile-max-width) {
     min-height: 390px;
-    grid-template: minmax(50px, auto) 71px 1fr / 1fr minmax(auto, 437px) minmax(auto, 437px) 1fr;
+    grid-template: minmax(50px, auto) minmax(71px, auto) 1fr / 1fr minmax(auto, 437px) minmax(auto, 437px) 1fr;
     background-image: url("../img/bike-mobile.jpg");
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -64,8 +64,8 @@
 
   @media (max-width: $tablet-max-width) {
     order: 2;
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
   }
 }
 

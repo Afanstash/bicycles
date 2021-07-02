@@ -1,33 +1,4 @@
 @charset "UTF-8";
-/* Файл global/variables.scss */
-/* Файл global/mixin.scss */
-/* Файл global/global.scss */
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-*,
-*::after,
-*::before {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit; }
-
-img {
-  max-width: 100%;
-  height: auto; }
-
-a {
-  text-decoration: none; }
-
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  white-space: nowrap;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px; }
-
 /* Файл global/fonts.scss */
 /* Fonts */
 /* open-sans-300 - latin_cyrillic */
@@ -65,6 +36,35 @@ a {
   src: local("Open Sans"), local("OpenSans"), local("Open-Sans"), url("../fonts/open-sans-v20-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/open-sans-v20-latin_cyrillic-700.woff") format("woff");
   /* Modern Browsers */
   font-display: swap; }
+
+/* Файл global/variables.scss */
+/* Файл global/mixin.scss */
+/* Файл global/global.scss */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none; }
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px; }
 
 /* Файл blocks/page.scss */
 .page {
@@ -136,7 +136,7 @@ a {
   @media (max-width: 1023px) {
     .page-header__block {
       min-height: 340px;
-      grid-template: minmax(50px, auto) 85px 1fr/1fr minmax(auto, 437px) minmax(auto, 437px) 1fr;
+      grid-template: minmax(50px, auto) minmax(85px, auto) 1fr/1fr minmax(auto, 437px) minmax(auto, 437px) 1fr;
       background-image: url("../img/bike-tablet.jpg"); } }
   @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
     .page-header__block {
@@ -144,7 +144,7 @@ a {
   @media (max-width: 767px) {
     .page-header__block {
       min-height: 390px;
-      grid-template: minmax(50px, auto) 71px 1fr/1fr minmax(auto, 437px) minmax(auto, 437px) 1fr;
+      grid-template: minmax(50px, auto) minmax(71px, auto) 1fr/1fr minmax(auto, 437px) minmax(auto, 437px) 1fr;
       background-image: url("../img/bike-mobile.jpg"); } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
     .page-header__block {
@@ -180,8 +180,8 @@ a {
       -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;
               order: 2;
-      grid-column: 3 / 4;
-      grid-row: 1 / 2; } }
+      grid-column: 2 / 4;
+      grid-row: 2 / 3; } }
 
 .page-header__slogan {
   padding-top: 27px;
@@ -299,6 +299,9 @@ a {
 
 @media (max-width: 1023px) {
   .main-nav--closed .main-nav__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
     background-color: #0ad9c6; }
     .main-nav--closed .main-nav__toggle:hover, .main-nav--closed .main-nav__toggle:focus {
       background-color: #826628; }
@@ -395,7 +398,8 @@ a {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      border-bottom: none; } }
+      border-bottom: none;
+      background-color: #ffffff; } }
 
 .main-nav__item {
   margin-bottom: 9px; }
