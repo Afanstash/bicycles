@@ -433,13 +433,13 @@ a {
         height: 25px;
         top: 19px;
         right: 16px;
-        background-image: url("../../img/arrow.svg");
+        background-image: url("../img/arrow.svg");
         background-repeat: no-repeat;
         background-position: 0 0; }
       .main-nav__link:hover::before, .main-nav__link:focus::before, .main-nav__link:active::before {
-        background-image: url("../../img/arrow-hover-focus.svg"); }
+        background-image: url("../img/arrow-hover-focus.svg"); }
       .main-nav__link:active::before {
-        background-image: url("../../img/arrow-active.svg"); } }
+        background-image: url("../img/arrow-active.svg"); } }
 
 .main-nav__link:hover,
 .main-nav__link:focus {
