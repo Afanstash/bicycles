@@ -46,7 +46,7 @@
                 </div>
                 <div class="form__field">
                   <label class="visually-hidden" for="user-phone">Телефон</label>
-                  <input id="user-phone" type="tel" name="tel" placeholder="Введите Ваш номер телефона" required="required" pattern="[0-9]+">
+                  <input id="user-phone" type="tel" name="tel" placeholder="Введите Ваш номер телефона" required="required" pattern="\+?[0-9\s\-\()]+">
                 </div>
                 <button class="form__button" type="submit">Подобрать велосипед мечты</button>
               </form>
@@ -86,7 +86,9 @@
                   <div class="types__content types__content--first-column">
                     <div class="types__img">
                       <picture>
-                        <source type="image/webp" srcset="img/type-of-bike-1-tablet.webp 1x, img/type-of-bike-1-tablet@2x.webp 2x">
+                        <source type="image/webp" media="(max-width: 767px)" srcset="img/type-of-bike-1-mobile.webp 1x, img/type-of-bike-1-mobile@2x.webp 2x">
+                        <source type="image/webp" media="(max-width: 1023px)" srcset="img/type-of-bike-1-tablet.webp 1x, img/type-of-bike-1-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/type-of-bike-1-desktop.webp 1x, img/type-of-bike-1-desktop@2x.webp 2x">
                         <!-- 1х: 342px*503px; 2x: 684px*1006px -->
                         <img src="img/type-of-bike-1-tablet.jpg" srcset="img/type-of-bike-1-tablet@2x.jpg 2x" width="342" height="503" alt="Любая дорога вам по плечу">
                       </picture>
@@ -98,7 +100,9 @@
                   <div class="types__content types__content--center-column">
                     <div class="types__img">
                       <picture>
-                        <source type="image/webp" srcset="img/type-of-bike-2-tablet.webp 1x, img/type-of-bike-2-tablet@2x.webp 2x">
+                        <source type="image/webp" media="(max-width: 767px)" srcset="img/type-of-bike-2-mobile.webp 1x, img/type-of-bike-2-mobile@2x.webp 2x">
+                        <source type="image/webp" media="(max-width: 1023px)" srcset="img/type-of-bike-2-tablet.webp 1x, img/type-of-bike-2-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/type-of-bike-2-desktop.webp 1x, img/type-of-bike-2-desktop@2x.webp 2x">
                         <!-- 1х: 342px*566px; 2x: 684px*1132px -->
                         <img src="img/type-of-bike-2-tablet.jpg" srcset="img/type-of-bike-2-tablet@2x.jpg 2x" width="342" height="566" alt="Сможете подняться легко под самым крутым углом">
                       </picture>
@@ -110,7 +114,9 @@
                   <div class="types__content types__content--last-column">
                     <div class="types__img">
                       <picture>
-                        <source type="image/webp" srcset="img/type-of-bike-3-tablet.webp 1x, img/type-of-bike-3-tablet@2x.webp 2x">
+                        <source type="image/webp" media="(max-width: 767px)" srcset="img/type-of-bike-3-mobile.webp 1x, img/type-of-bike-3-mobile@2x.webp 2x">
+                        <source type="image/webp" media="(max-width: 1023px)" srcset="img/type-of-bike-3-tablet.webp 1x, img/type-of-bike-3-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/type-of-bike-3-desktop.webp 1x, img/type-of-bike-3-desktop@2x.webp 2x">
                         <!-- 1х: 342px*513px; 2x: 684px*1026px -->
                         <img src="img/type-of-bike-3-tablet.jpg" srcset="img/type-of-bike-3-tablet@2x.jpg 2x" width="342" height="513" alt="Ваш ребенок будет доволен">
                       </picture>

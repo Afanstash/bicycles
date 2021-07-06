@@ -1,5 +1,5 @@
 .types {
-  padding: 149px 0 129px;
+  padding: 149px 0 94px;
   background-color: $color-grey;
   display: grid;
   grid-template: auto / 1fr minmax(auto, $desktop-content-width) 1fr;
@@ -41,9 +41,18 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0;
+  }
 }
 
 .types__item {
+  margin-bottom: 35px;
   padding: 0 25px;
   flex-grow: 0;
   flex-shrink: 1;

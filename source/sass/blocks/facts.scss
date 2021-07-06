@@ -4,7 +4,7 @@
   grid-template: auto / 1fr minmax(auto, $desktop-content-width) 1fr;
 
   @media (max-width: $tablet-max-width) {
-    padding: 70px 106px 33px;
+    padding: 70px 93px 33px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -28,22 +28,32 @@
 
 .facts__list {
   @include off-list;
+  margin: 0 -20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 
-  @media (max-width: $mobile-max-width) {
-    justify-content: center;
+  @media (max-width: $tablet-max-width) {
+    @include off-margin;
   }
 }
 
 .facts__item {
   margin-bottom: 40px;
-  padding: 0 5px;
-  flex: 0 0 265px;
+  padding: 0 20px;
+  flex: 0 0 25%;
+  // display: flex;
+  // flex-direction: column;
+  // flex-shrink: 1;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 0 16px;
+    flex: 0 0 50%;
+  }
 
   @media (max-width: $mobile-max-width) {
-    padding: 0 3px;
+    flex: 0 0 100%;
+    padding: 0 20px;
   }
 }
 
