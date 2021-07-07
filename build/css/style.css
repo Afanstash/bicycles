@@ -169,6 +169,9 @@ a {
     .page-header__logo-wrap {
       padding-left: 17px; } }
 
+.page-header__logo-link {
+  cursor: default; }
+
 .page-header__main-nav {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;

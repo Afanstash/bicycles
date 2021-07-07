@@ -57,6 +57,10 @@
   }
 }
 
+.page-header__logo-link {
+  cursor: default;
+}
+
 .page-header__main-nav {
   order: 1;
   grid-column: 2 / 4;
