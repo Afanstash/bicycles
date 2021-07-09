@@ -6,6 +6,7 @@ var form = document.querySelector('.form');
 var inputUserName = form.querySelector('#user-name');
 var inputUserPhone = form.querySelector('#user-phone');
 var isStorageSupport = true;
+var body = document.querySelector('.body');
 
 (function () {
   navMain.classList.remove('main-nav--nojs');
@@ -17,9 +18,11 @@ var isStorageSupport = true;
     if (navMain.classList.contains('main-nav--closed')) {
       navMain.classList.remove('main-nav--closed');
       navMain.classList.add('main-nav--opened');
+      body.classList.add('lock');
     } else {
       navMain.classList.add('main-nav--closed');
       navMain.classList.remove('main-nav--opened');
+      body.classList.remove('lock');
     }
   });
 })();
@@ -31,6 +34,7 @@ var isStorageSupport = true;
         evt.preventDefault();
         navMain.classList.add('main-nav--closed');
         navMain.classList.remove('main-nav--opened');
+        body.classList.remove('lock');
       }
     }
   });
@@ -48,6 +52,7 @@ var isStorageSupport = true;
       });
       navMain.classList.add('main-nav--closed');
       navMain.classList.remove('main-nav--opened');
+      body.classList.remove('lock');
     });
   });
 })();
